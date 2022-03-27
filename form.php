@@ -16,24 +16,28 @@ echo '<form enctype="multipart/form-data" action="thanks.php" method="post" id="
     <div>
         <label for="name">Nom :</label>
         <input type="text" id="name" name="user_name" required>
+        <span class="error">*'.$nomErr.'</span>
     </div>
     <div>
         <label for="first_name">Prénom :</label>
         <input type="text" id="first_name" name="user_first_name" required>
+        <span class="error">*'.$prenomErr.'</span>
     </div>
     <div>
         <label for="mail">E-mail&nbsp;:</label>
-        <input type="email" id="mail" name="user_mail">
+        <input type="email" id="mail" name="user_mail" required>
+        <span class="error">*'.$mailErr.'</span>
     </div>
     <div>
         <label for="phone">Numéro de téléphone :</label>
         <input type="tel" id="phone" name="user_phone" pattern="[0-9]{10}"
         required>
         <small>Format: 0601020304</small>
+        <span class="error">*'.$phoneErr.'</span>
     </div>
     <div>
     <label for="topic">Choisissez un sujet:</label>
-
+    <span class="error">*'.$sujetErr.'</span>
     <select name="topics" id="topic">
         <option value="top1">--Choisissez un sujet--</option>
         <option value="php">Apprendre PHP</option>
@@ -42,12 +46,13 @@ echo '<form enctype="multipart/form-data" action="thanks.php" method="post" id="
     </select>
     </div>
     <div>
-        <label for="msg">Message :</label>
-        <textarea id="msg" name="user_message"></textarea>
-    </div>
-    <div  class="button">
-      <button  type="submit">Envoyer votre message</button>
-    </div>
+    <label for="msg">Message :</label>
+    <span class="error">*'.$messageErr.'</span>
+    <textarea id="msg" name="user_message"></textarea>
+</div>
+<div  class="button">
+  <button  type="submit">Envoyer votre message</button>
+</div
     </form>';
 
 echo '</body>';
