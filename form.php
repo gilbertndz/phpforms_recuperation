@@ -34,7 +34,7 @@ echo '<form enctype="multipart/form-data" action="thanks.php" method="post" id="
     <div>
     <label for="topic">Choisissez un sujet:</label>
 
-    <select name="topics" id="topic" required>
+    <select name="topics" id="topic">
         <option value="top1">--Choisissez un sujet--</option>
         <option value="php">Apprendre PHP</option>
         <option value="java">Apprendre Java</option>
@@ -49,8 +49,6 @@ echo '<form enctype="multipart/form-data" action="thanks.php" method="post" id="
       <button  type="submit">Envoyer votre message</button>
     </div>
     </form>';
-
-    echo  $_POST['user_name'];
 
 echo '</body>';
 
